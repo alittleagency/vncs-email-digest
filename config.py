@@ -1,4 +1,4 @@
-"""Configuration for the PAC Intel Digest pipeline."""
+"""Configuration for the VNCS Email Digest pipeline."""
 
 import os
 from pathlib import Path
@@ -14,7 +14,7 @@ GMAIL_CREDENTIALS_FILE = os.getenv("GMAIL_CREDENTIALS_FILE", "gmail_credentials.
 GMAIL_ACCOUNT = "your-monitoring-gmail@gmail.com"  # Update this
 
 # Inbox label to read from (usually "INBOX")
-GMAIL_INBOX_LABEL = "INBOX"
+GMAIL_INBOX_LABEL = "digest"
 
 # How many hours back to look for unread emails
 GMAIL_LOOKBACK_HOURS = 24
@@ -51,23 +51,6 @@ OUTPUT_FILE = "index.html"
 
 # GitHub Pages URL
 GITHUB_PAGES_URL = f"https://{GITHUB_REPO_OWNER}.github.io/{GITHUB_REPO_NAME}"
-
-# ==============================================================================
-# EMAIL SETTINGS
-# ==============================================================================
-
-# Gmail SMTP server (Gmail's server)
-EMAIL_SMTP_HOST = "smtp.gmail.com"
-EMAIL_SMTP_PORT = 587
-
-# From address (the dedicated Gmail account sending the email)
-EMAIL_FROM = GMAIL_ACCOUNT
-
-# Recipient email address
-EMAIL_TO = "email-tech@vncs.io"
-
-# Email subject template (will be formatted with date)
-EMAIL_SUBJECT_TEMPLATE = "PAC Intel Digest — {date_formatted}"
 
 # ==============================================================================
 # SENDER LOOKUP

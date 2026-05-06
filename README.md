@@ -1,4 +1,4 @@
-# PAC Intel Digest Pipeline
+# VNCS Email Digest Digest Pipeline
 
 Automated daily political intelligence digest that reads a Gmail inbox, analyzes emails with Claude AI, generates fresh HTML, deploys to GitHub Pages, and sends a notification email.
 
@@ -34,7 +34,7 @@ The pipeline uses **installed app** OAuth2 (user-facing flow), not a service acc
 
 **Step 1: Create a Google Cloud project**
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project (name: "PAC Intel Digest" or similar)
+2. Create a new project (name: "VNCS Email Digest Digest" or similar)
 3. Enable the **Gmail API**:
    - Go to **APIs & Services** → **Library**
    - Search for "Gmail API"
@@ -44,7 +44,7 @@ The pipeline uses **installed app** OAuth2 (user-facing flow), not a service acc
 1. Go to **APIs & Services** → **Credentials**
 2. Click **Create Credentials** → **OAuth 2.0 Client ID**
 3. Choose **Desktop application**
-4. Name it "PAC Intel Digest"
+4. Name it "VNCS Email Digest Digest"
 5. Click **Create**
 6. Download the JSON file and save as `client_secret.json`
 
@@ -77,7 +77,7 @@ The pipeline needs write access to push HTML updates to the repo.
 
 1. Go to GitHub **Settings** → **Developer settings** → **Personal access tokens** → **Tokens (classic)**
 2. Click **Generate new token**
-3. Give it a name: "PAC Intel Digest"
+3. Give it a name: "VNCS Email Digest Digest"
 4. Grant scopes: `repo` (full control of private/public repos)
 5. Copy the token
 
@@ -136,7 +136,7 @@ On first run:
 The workflow is scheduled to run at 7am ET every weekday. To trigger it manually for testing:
 
 1. Go to the repo **Actions** tab
-2. Click **Daily PAC Intel Digest** workflow
+2. Click **Daily VNCS Email Digest Digest** workflow
 3. Click **Run workflow** → **Run workflow**
 
 The workflow will run and you can watch the logs in real-time.
@@ -176,7 +176,7 @@ The workflow will run and you can watch the logs in real-time.
 
 6. **Email Notification** (Gmail SMTP)
    - Sends notification to email-tech@vncs.io
-   - Subject: "PAC Intel Digest — [Date]"
+   - Subject: "VNCS Email Digest Digest — [Date]"
    - Body: Link to the live digest
    - On error: Sends error notification with details
 
@@ -204,7 +204,7 @@ https://alittleagency.github.io/vncs-email-digest
 ### Monitor Workflow Runs
 
 1. Go to repo **Actions** tab
-2. Click the latest **Daily PAC Intel Digest** run
+2. Click the latest **Daily VNCS Email Digest Digest** run
 3. View logs for each step
 4. If failed, check error messages and logs
 
@@ -313,4 +313,4 @@ For issues or questions:
 
 ## License
 
-Internal use only. Part of the A Little Agency PAC Intel service.
+Internal use only. Part of the A Little Agency VNCS Email Digest service.

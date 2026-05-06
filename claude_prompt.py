@@ -1,4 +1,4 @@
-"""Claude API prompt templates for PAC Intel Digest."""
+"""Claude API prompt templates for VNCS Email Digest Digest."""
 
 from typing import List, Dict
 

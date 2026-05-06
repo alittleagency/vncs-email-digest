@@ -1,21 +1,18 @@
 #!/usr/bin/env python3
 """
-PAC Intel Digest Pipeline
+VNCS Email Digest Pipeline
 
 Reads Gmail inbox, analyzes emails with Claude API, generates HTML digest,
-and deploys to GitHub Pages with email notification.
+and deploys to GitHub Pages.
 """
 
 import logging
 import json
 import base64
-import smtplib
 import subprocess
 import shutil
 from datetime import datetime, timedelta
 from pathlib import Path
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 from typing import List, Dict, Optional
 import re
 
@@ -408,52 +405,6 @@ def deploy_to_github(html_content: str) -> str:
     return config.GITHUB_PAGES_URL
 
 
-# ==============================================================================
-# EMAIL NOTIFICATION
-# ==============================================================================
-
-def send_email(subject: str, body: str, is_error: bool = False):
-    """
-    Send email via Gmail SMTP.
-
-    Args:
-        subject: Email subject
-        body: Email body (plain text or HTML)
-        is_error: If True, sends to email-tech@vncs.io; otherwise uses EMAIL_TO from config
-    """
-    # For errors, always send to email-tech@vncs.io
-    recipient = "email-tech@vncs.io"
-
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = subject
-    msg["From"] = config.EMAIL_FROM
-    msg["To"] = recipient
-
-    part = MIMEText(body, "html" if not is_error else "plain")
-    msg.attach(part)
-
-    try:
-        with smtplib.SMTP(config.EMAIL_SMTP_HOST, config.EMAIL_SMTP_PORT) as server:
-            server.starttls()
-            server.login(config.EMAIL_FROM, get_gmail_app_password())
-            server.sendmail(config.EMAIL_FROM, recipient, msg.as_string())
-            logger.info(f"Email sent to {recipient}")
-    except Exception as e:
-        logger.error(f"Failed to send email: {e}")
-        raise
-
-
-def get_gmail_app_password() -> str:
-    """
-    Get Gmail app password from environment or prompt user.
-    For production, this should come from an env var in GitHub Actions.
-    """
-    import os
-    password = os.getenv("GMAIL_APP_PASSWORD")
-    if not password:
-        password = input("Enter your Gmail app password: ")
-    return password
-
 
 # ==============================================================================
 # MAIN ORCHESTRATION
@@ -462,7 +413,7 @@ def get_gmail_app_password() -> str:
 def main():
     """Main pipeline orchestration."""
     try:
-        logger.info("Starting PAC Intel Digest pipeline")
+        logger.info("Starting VNCS Email Digest pipeline")
 
         # Step 1: Authenticate and fetch emails
         logger.info("Authenticating with Gmail")
@@ -494,31 +445,11 @@ def main():
         logger.info("Deploying to GitHub Pages")
         pages_url = deploy_to_github(html_with_content)
 
-        # Step 6: Send notification email
-        now = datetime.now()
-        date_formatted = now.strftime("%A, %B %d, %Y")
-        subject = f"PAC Intel Digest — {date_formatted}"
-        body = f"<p>PAC Intel digest is ready → <a href='{pages_url}'>{pages_url}</a></p>"
-
-        logger.info(f"Sending notification email")
-        send_email(subject, body)
 
         logger.info("Pipeline completed successfully")
 
     except Exception as e:
         logger.error(f"Pipeline failed: {e}", exc_info=True)
-
-        # Send error notification
-        now = datetime.now()
-        date_formatted = now.strftime("%A, %B %d, %Y")
-        error_subject = f"PAC Intel Digest FAILED — {date_formatted}"
-        error_body = f"Pipeline error:\n\n{str(e)}\n\nCheck logs for details."
-
-        try:
-            send_email(error_subject, error_body, is_error=True)
-        except Exception as email_error:
-            logger.error(f"Failed to send error email: {email_error}")
-
         raise
 
 
