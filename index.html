@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>PAC Intel Daily Digest</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -131,429 +132,395 @@
 </head>
 <body>
 <div class="container">
-
-  <div class="header">
-    <div class="logo">
-      <div class="logo-dot"></div>
-      <div class="title">PAC Intel Daily Digest <span class="live-badge">LIVE</span></div>
-    </div>
-    <div class="datestamp">Monday, April 28, 2026 · 7:04 AM</div>
-  </div>
-
-  <div class="stats">
-    <div class="stat" onclick="showTab('all', document.querySelector('.tab:nth-child(4)'))"><div class="stat-label">Emails</div><div class="stat-val stat-emails">31</div></div>
-    <div class="stat" onclick="showTab('trends', document.querySelector('.tab:nth-child(1)'))"><div class="stat-label">Trending topics</div><div class="stat-val stat-trends">4</div></div>
-    <div class="stat" onclick="showTab('gop', document.querySelector('.tab:nth-child(2)'))"><div class="stat-label">GOP spend signals</div><div class="stat-val red stat-gop">4</div></div>
-    <div class="stat" onclick="showTab('flags', document.querySelector('.tab:nth-child(3)'))"><div class="stat-label">New senders</div><div class="stat-val amber stat-new-senders">1</div></div>
-  </div>
-
-  <div class="tabs">
-    <button class="tab active" onclick="showTab('trends', this)">Messaging trends</button>
-    <button class="tab" onclick="showTab('gop', this)">GOP spend intel</button>
-    <button class="tab" onclick="showTab('flags', this)">Other flags<span class="tab-alert" id="flagAlert" style="display: none;"></span></button>
-    <button class="tab" onclick="showTab('all', this)">All emails</button>
-    <button class="tab" onclick="showTab('sublist', this)">Subscription list</button>
-  </div>
-
-  <!-- MESSAGING TRENDS -->
-  <div id="trends" class="tab-panel active">
-    <div class="section-label">D-side · trending topics this week</div>
-
-    <div class="trend-card">
-      <div class="trend-card-header">
-        <div class="trend-topic">"Accountability" replacing "extreme" as the dominant attack frame</div>
-        <div class="trend-heat">
-          <div class="heat-bar"><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip"></div></div>
-          <div class="heat-count">11 emails · 4 days</div>
-        </div>
-      </div>
-      <div class="trend-angle">Priorities USA, DCCC, House Majority PAC, Progressive Turnout Project, and Bold PAC have all shifted from "extreme/extremist" language to "accountability" framing this week. Less about labeling Republicans and more about holding them responsible for specific votes — healthcare, Social Security, abortion access. The breadth of senders suggests this is a coordinated ecosystem pivot.</div>
-      <div class="trend-senders"><strong>Senders:</strong> Priorities USA, DCCC, House Majority PAC, Progressive Turnout Project, Bold PAC, American Bridge</div>
-      <div class="trend-examples">
-        <div class="example-line">"It's time to hold them accountable for gutting Medicaid" — Priorities USA, 4/27</div>
-        <div class="example-line">"Accountability starts at the ballot box" — DCCC, 4/26</div>
-        <div class="example-line">"No more excuses. No more delays. Accountability." — Progressive Turnout Project, 4/26</div>
-        <div class="example-line">"No accountability, no majority" — House Majority PAC, 4/25</div>
-      </div>
-    </div>
-
-    <div class="trend-card">
-      <div class="trend-card-header">
-        <div class="trend-topic">Medicaid cuts as primary mobilization hook — two distinct angles emerging</div>
-        <div class="trend-heat">
-          <div class="heat-bar"><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip"></div></div>
-          <div class="heat-count">9 emails · 5 days</div>
-        </div>
-      </div>
-      <div class="trend-angle">Medicaid is the specific policy vehicle — not "healthcare" broadly. End Citizens United and Defend the Vote are framing it as a corruption angle ("gutting care to fund tax cuts for donors"), while Care in Action and DSCC are going constituent-impact. Worth watching which angle performs better in your clients' A/B tests.</div>
-      <div class="trend-senders"><strong>Senders:</strong> DSCC, Care in Action, Senate Majority PAC, DCCC, End Citizens United, Defend the Vote</div>
-      <div class="trend-examples">
-        <div class="example-line">"$880 billion in Medicaid cuts. Real people. Real harm." — DSCC, 4/27</div>
-        <div class="example-line">"They're cutting Medicaid to give tax breaks to their donors. That's corruption." — End Citizens United, 4/26</div>
-        <div class="example-line">"Home care workers will lose their jobs. Their clients will lose their care." — Care in Action, 4/26</div>
-      </div>
-    </div>
-
-    <div class="trend-card">
-      <div class="trend-card-header">
-        <div class="trend-topic">FEC deadline urgency — end-of-quarter volume spike</div>
-        <div class="trend-heat">
-          <div class="heat-bar"><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div></div>
-          <div class="heat-count">14 emails · 3 days</div>
-        </div>
-      </div>
-      <div class="trend-angle">Q1 FEC deadline Friday. Almost every D-side org is in full fundraising mode — subject lines leaning on deadline urgency, matching gift offers, and donor count framing. NDTC sent two deadline emails today alone. Not a messaging pivot, but volume is at a weekly high across the board.</div>
-      <div class="trend-senders"><strong>Senders:</strong> DCCC, DNC, DSCC, EMILY's List, Senate Majority PAC, Run for Something, NDTC, Elect Democratic Women, Bold PAC</div>
-      <div class="trend-examples">
-        <div class="example-line">"Hours left. Will you be one of our 500 donors before midnight?" — DCCC, 4/27</div>
-        <div class="example-line">"Our FEC report goes public Friday. Don't let it tell the wrong story." — DNC, 4/26</div>
-        <div class="example-line">"We're 47 donors short. Can you be #48?" — NDTC, 4/27</div>
-      </div>
-    </div>
-
-    <div class="trend-card">
-      <div class="trend-card-header">
-        <div class="trend-topic">AI in political advertising — trade press and legal orgs both watching</div>
-        <div class="trend-heat">
-          <div class="heat-bar"><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip"></div><div class="heat-pip"></div><div class="heat-pip"></div></div>
-          <div class="heat-count">4 emails · 7 days</div>
-        </div>
-      </div>
-      <div class="trend-angle">C&E focused on speed advantage, AdImpact flagged buy data gaps for AI-generated placements, and Democracy Forward sent a note on FEC disclosure rule uncertainty for AI creative. Two different worlds — industry and legal — landing on the same issue from different angles. Disclosure is the emerging pressure point.</div>
-      <div class="trend-senders"><strong>Senders:</strong> Campaigns & Elections, AdImpact Newsletter, Politico Playbook, Democracy Forward</div>
-      <div class="trend-examples">
-        <div class="example-line">"The campaigns using AI creative in 2026 are moving faster than compliance can keep up" — C&E, 4/27</div>
-        <div class="example-line">"FEC disclosure rules for AI-generated ads remain dangerously unclear" — Democracy Forward, 4/25</div>
-      </div>
-    </div>
-
-    <div class="dive-section">
-      <div class="dive-label">Ask Claude to go deeper</div>
-      <button class="dive-btn" onclick="showModal('Summarize D-side messaging trends this week across all emails', 'Full analysis with examples, pivot points, and what to watch next week')">
-        <div class="dive-btn-body"><div class="dive-btn-title">Summarize D-side messaging trends this week across all emails</div><div class="dive-btn-sub">Full analysis with examples, pivot points, and what to watch next week</div></div>
-        <div class="dive-arrow">↗</div>
-      </button>
-      <button class="dive-btn" onclick="showModal('Is the accountability pivot coordinated?', 'Compare timing across senders')">
-        <div class="dive-btn-body"><div class="dive-btn-title">Is the "accountability" pivot coordinated? Compare timing across senders</div><div class="dive-btn-sub">Look for same-day sends, shared language, likely origin</div></div>
-        <div class="dive-arrow">↗</div>
-      </button>
-      <button class="dive-btn" onclick="showModal('What creative angles are D-side PACs using on Medicaid?', 'Compare the corruption frame vs. constituent-impact frame — pull all examples')">
-        <div class="dive-btn-body"><div class="dive-btn-title">What creative angles are D-side PACs using on Medicaid right now?</div><div class="dive-btn-sub">Compare the corruption frame vs. constituent-impact frame — pull all examples</div></div>
-        <div class="dive-arrow">↗</div>
-      </button>
-    </div>
-  </div>
-
-  <!-- GOP SPEND INTEL -->
-  <div id="gop" class="tab-panel">
-    <div class="section-label">Where Republicans are spending — good fodder for your emails</div>
-
-    <div class="spend-card">
-      <div class="spend-header">
-        <div class="spend-title">NRCC buying in OH-07, PA-08, AZ-01 — three Frontline districts at once</div>
-        <div class="spend-source">NRCC · 6:12 AM</div>
-      </div>
-      <div class="spend-detail">Email footer named media vendors in all three districts. Unusual for April — suggests early pressure campaign. OH-07 and PA-08 are both on the DCCC Frontline list. Progressive Turnout Project and Hold the Line are both active in OH-07, so there's already D-side infrastructure there to coordinate with.</div>
-      <div class="spend-fodder">
-        <div class="spend-fodder-label">Fodder for your emails</div>
+<div class="header">
+<div class="logo">
+<div class="logo-dot"></div>
+<div class="title">PAC Intel Daily Digest <span class="live-badge">LIVE</span></div>
+</div>
+<div class="datestamp">Wednesday, May 06, 2026 at 10:39 AM</div>
+</div>
+<div class="stats">
+<div class="stat" onclick="showTab('all', document.querySelector('.tab:nth-child(4)'))"><div class="stat-label">Emails</div><div class="stat-val stat-emails">10</div></div>
+<div class="stat" onclick="showTab('trends', document.querySelector('.tab:nth-child(1)'))"><div class="stat-label">Trending topics</div><div class="stat-val stat-trends">4</div></div>
+<div class="stat" onclick="showTab('gop', document.querySelector('.tab:nth-child(2)'))"><div class="stat-label">GOP spend signals</div><div class="stat-val red stat-gop">4</div></div>
+<div class="stat" onclick="showTab('flags', document.querySelector('.tab:nth-child(3)'))"><div class="stat-label">New senders</div><div class="stat-val amber stat-new-senders">1</div></div>
+</div>
+<div class="tabs">
+<button class="tab active" onclick="showTab('trends', this)">Messaging trends</button>
+<button class="tab" onclick="showTab('gop', this)">GOP spend intel</button>
+<button class="tab" onclick="showTab('flags', this)">Other flags<span class="tab-alert" id="flagAlert" style="display: none;"></span></button>
+<button class="tab" onclick="showTab('all', this)">All emails</button>
+<button class="tab" onclick="showTab('sublist', this)">Subscription list</button>
+</div>
+<!-- MESSAGING TRENDS -->
+<div class="tab-panel active" id="trends">
+<div class="section-label">D-side · trending topics this week</div>
+<div class="trend-card">
+<div class="trend-card-header">
+<div class="trend-topic">"Accountability" replacing "extreme" as the dominant attack frame</div>
+<div class="trend-heat">
+<div class="heat-bar"><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip"></div></div>
+<div class="heat-count">11 emails · 4 days</div>
+</div>
+</div>
+<div class="trend-angle">Priorities USA, DCCC, House Majority PAC, Progressive Turnout Project, and Bold PAC have all shifted from "extreme/extremist" language to "accountability" framing this week. Less about labeling Republicans and more about holding them responsible for specific votes — healthcare, Social Security, abortion access. The breadth of senders suggests this is a coordinated ecosystem pivot.</div>
+<div class="trend-senders"><strong>Senders:</strong> Priorities USA, DCCC, House Majority PAC, Progressive Turnout Project, Bold PAC, American Bridge</div>
+<div class="trend-examples">
+<div class="example-line">"It's time to hold them accountable for gutting Medicaid" — Priorities USA, 4/27</div>
+<div class="example-line">"Accountability starts at the ballot box" — DCCC, 4/26</div>
+<div class="example-line">"No more excuses. No more delays. Accountability." — Progressive Turnout Project, 4/26</div>
+<div class="example-line">"No accountability, no majority" — House Majority PAC, 4/25</div>
+</div>
+</div>
+<div class="trend-card">
+<div class="trend-card-header">
+<div class="trend-topic">Medicaid cuts as primary mobilization hook — two distinct angles emerging</div>
+<div class="trend-heat">
+<div class="heat-bar"><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip"></div></div>
+<div class="heat-count">9 emails · 5 days</div>
+</div>
+</div>
+<div class="trend-angle">Medicaid is the specific policy vehicle — not "healthcare" broadly. End Citizens United and Defend the Vote are framing it as a corruption angle ("gutting care to fund tax cuts for donors"), while Care in Action and DSCC are going constituent-impact. Worth watching which angle performs better in your clients' A/B tests.</div>
+<div class="trend-senders"><strong>Senders:</strong> DSCC, Care in Action, Senate Majority PAC, DCCC, End Citizens United, Defend the Vote</div>
+<div class="trend-examples">
+<div class="example-line">"$880 billion in Medicaid cuts. Real people. Real harm." — DSCC, 4/27</div>
+<div class="example-line">"They're cutting Medicaid to give tax breaks to their donors. That's corruption." — End Citizens United, 4/26</div>
+<div class="example-line">"Home care workers will lose their jobs. Their clients will lose their care." — Care in Action, 4/26</div>
+</div>
+</div>
+<div class="trend-card">
+<div class="trend-card-header">
+<div class="trend-topic">FEC deadline urgency — end-of-quarter volume spike</div>
+<div class="trend-heat">
+<div class="heat-bar"><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip on"></div></div>
+<div class="heat-count">14 emails · 3 days</div>
+</div>
+</div>
+<div class="trend-angle">Q1 FEC deadline Friday. Almost every D-side org is in full fundraising mode — subject lines leaning on deadline urgency, matching gift offers, and donor count framing. NDTC sent two deadline emails today alone. Not a messaging pivot, but volume is at a weekly high across the board.</div>
+<div class="trend-senders"><strong>Senders:</strong> DCCC, DNC, DSCC, EMILY's List, Senate Majority PAC, Run for Something, NDTC, Elect Democratic Women, Bold PAC</div>
+<div class="trend-examples">
+<div class="example-line">"Hours left. Will you be one of our 500 donors before midnight?" — DCCC, 4/27</div>
+<div class="example-line">"Our FEC report goes public Friday. Don't let it tell the wrong story." — DNC, 4/26</div>
+<div class="example-line">"We're 47 donors short. Can you be #48?" — NDTC, 4/27</div>
+</div>
+</div>
+<div class="trend-card">
+<div class="trend-card-header">
+<div class="trend-topic">AI in political advertising — trade press and legal orgs both watching</div>
+<div class="trend-heat">
+<div class="heat-bar"><div class="heat-pip on"></div><div class="heat-pip on"></div><div class="heat-pip"></div><div class="heat-pip"></div><div class="heat-pip"></div></div>
+<div class="heat-count">4 emails · 7 days</div>
+</div>
+</div>
+<div class="trend-angle">C&amp;E focused on speed advantage, AdImpact flagged buy data gaps for AI-generated placements, and Democracy Forward sent a note on FEC disclosure rule uncertainty for AI creative. Two different worlds — industry and legal — landing on the same issue from different angles. Disclosure is the emerging pressure point.</div>
+<div class="trend-senders"><strong>Senders:</strong> Campaigns &amp; Elections, AdImpact Newsletter, Politico Playbook, Democracy Forward</div>
+<div class="trend-examples">
+<div class="example-line">"The campaigns using AI creative in 2026 are moving faster than compliance can keep up" — C&amp;E, 4/27</div>
+<div class="example-line">"FEC disclosure rules for AI-generated ads remain dangerously unclear" — Democracy Forward, 4/25</div>
+</div>
+</div>
+<div class="dive-section">
+<div class="dive-label">Ask Claude to go deeper</div>
+<button class="dive-btn" onclick="showModal('Summarize D-side messaging trends this week across all emails', 'Full analysis with examples, pivot points, and what to watch next week')">
+<div class="dive-btn-body"><div class="dive-btn-title">Summarize D-side messaging trends this week across all emails</div><div class="dive-btn-sub">Full analysis with examples, pivot points, and what to watch next week</div></div>
+<div class="dive-arrow">↗</div>
+</button>
+<button class="dive-btn" onclick="showModal('Is the accountability pivot coordinated?', 'Compare timing across senders')">
+<div class="dive-btn-body"><div class="dive-btn-title">Is the "accountability" pivot coordinated? Compare timing across senders</div><div class="dive-btn-sub">Look for same-day sends, shared language, likely origin</div></div>
+<div class="dive-arrow">↗</div>
+</button>
+<button class="dive-btn" onclick="showModal('What creative angles are D-side PACs using on Medicaid?', 'Compare the corruption frame vs. constituent-impact frame — pull all examples')">
+<div class="dive-btn-body"><div class="dive-btn-title">What creative angles are D-side PACs using on Medicaid right now?</div><div class="dive-btn-sub">Compare the corruption frame vs. constituent-impact frame — pull all examples</div></div>
+<div class="dive-arrow">↗</div>
+</button>
+</div>
+</div>
+<!-- GOP SPEND INTEL -->
+<div class="tab-panel" id="gop">
+<div class="section-label">Where Republicans are spending — good fodder for your emails</div>
+<div class="spend-card">
+<div class="spend-header">
+<div class="spend-title">NRCC buying in OH-07, PA-08, AZ-01 — three Frontline districts at once</div>
+<div class="spend-source">NRCC · 6:12 AM</div>
+</div>
+<div class="spend-detail">Email footer named media vendors in all three districts. Unusual for April — suggests early pressure campaign. OH-07 and PA-08 are both on the DCCC Frontline list. Progressive Turnout Project and Hold the Line are both active in OH-07, so there's already D-side infrastructure there to coordinate with.</div>
+<div class="spend-fodder">
+<div class="spend-fodder-label">Fodder for your emails</div>
         Republicans are already on air in these districts months ahead of last cycle. If clients are in OH-07 or PA-08, this is the justification to get on air now — frame the race before R-side ads define the landscape.
       </div>
-    </div>
-
-    <div class="spend-card">
-      <div class="spend-header">
-        <div class="spend-title">Senate Leadership Fund pairing Georgia and Michigan in same email — unusual</div>
-        <div class="spend-source">Senate Leadership Fund · 5:22 AM</div>
-      </div>
-      <div class="spend-detail">SLF hasn't historically grouped these two states together. Suggests simultaneous resource allocation — possibly reacting to Ossoff's strong Q1 or signaling a Michigan pickup attempt. Hold the Line sent a counter-message on Georgia the same morning, which may be a direct response.</div>
-      <div class="spend-fodder">
-        <div class="spend-fodder-label">Fodder for your emails</div>
+</div>
+<div class="spend-card">
+<div class="spend-header">
+<div class="spend-title">Senate Leadership Fund pairing Georgia and Michigan in same email — unusual</div>
+<div class="spend-source">Senate Leadership Fund · 5:22 AM</div>
+</div>
+<div class="spend-detail">SLF hasn't historically grouped these two states together. Suggests simultaneous resource allocation — possibly reacting to Ossoff's strong Q1 or signaling a Michigan pickup attempt. Hold the Line sent a counter-message on Georgia the same morning, which may be a direct response.</div>
+<div class="spend-fodder">
+<div class="spend-fodder-label">Fodder for your emails</div>
         When the opposition names your client's race in their fundraising, it's validation. "Even Republicans know this seat is in play" is a strong urgency frame for donor emails in both states.
       </div>
-    </div>
-
-    <div class="spend-card">
-      <div class="spend-header">
-        <div class="spend-title">Club for Growth previewing 6 primary targets — three overlap with DCCC expansion map</div>
-        <div class="spend-source">Club for Growth Action · 1:22 AM</div>
-      </div>
-      <div class="spend-detail">Named six safe-R districts for primary intervention. Three overlap with DCCC's 2026 expansion map. End Citizens United flagged CfG's involvement in two of the same races this week, framing it as dark money interference — that's a counter-narrative already in motion.</div>
-      <div class="spend-fodder">
-        <div class="spend-fodder-label">Fodder for your emails</div>
+</div>
+<div class="spend-card">
+<div class="spend-header">
+<div class="spend-title">Club for Growth previewing 6 primary targets — three overlap with DCCC expansion map</div>
+<div class="spend-source">Club for Growth Action · 1:22 AM</div>
+</div>
+<div class="spend-detail">Named six safe-R districts for primary intervention. Three overlap with DCCC's 2026 expansion map. End Citizens United flagged CfG's involvement in two of the same races this week, framing it as dark money interference — that's a counter-narrative already in motion.</div>
+<div class="spend-fodder">
+<div class="spend-fodder-label">Fodder for your emails</div>
         R primaries moving right = more extreme general election opponents. "They chose the most extreme candidate" is a ready-made fall frame. ECU is already using it — worth coordinating the angle with clients in those districts.
       </div>
-    </div>
-
-    <div class="spend-card">
-      <div class="spend-header">
-        <div class="spend-title">Trump / Save America — 5 emails in 4 days, volume spike</div>
-        <div class="spend-source">Trump / Save America · ongoing</div>
-      </div>
-      <div class="spend-detail">All five leaning into federal agency news and "witch hunt" framing. Subject line formula is consistent: urgent hook + dollar ask + countdown. D-side counter-messaging typically follows Trump's news cycle within 24–48 hours — this week that means agency/DOJ content is coming from D clients shortly.</div>
-      <div class="spend-fodder">
-        <div class="spend-fodder-label">Fodder for your emails</div>
+</div>
+<div class="spend-card">
+<div class="spend-header">
+<div class="spend-title">Trump / Save America — 5 emails in 4 days, volume spike</div>
+<div class="spend-source">Trump / Save America · ongoing</div>
+</div>
+<div class="spend-detail">All five leaning into federal agency news and "witch hunt" framing. Subject line formula is consistent: urgent hook + dollar ask + countdown. D-side counter-messaging typically follows Trump's news cycle within 24–48 hours — this week that means agency/DOJ content is coming from D clients shortly.</div>
+<div class="spend-fodder">
+<div class="spend-fodder-label">Fodder for your emails</div>
         Trump's fundraising emails are the fastest leading indicator of what the D-side will respond to next. What he sends Monday, your clients will want to counter by Wednesday. Subscribe and read before your morning briefings.
       </div>
-    </div>
-
-    <div class="dive-section">
-      <div class="dive-label">Ask Claude to go deeper</div>
-      <button class="dive-btn" onclick="showModal('Where is R-side money moving?', 'Track geographic shifts across NRCC, SLF, CLF, and CfG emails')">
-        <div class="dive-btn-body"><div class="dive-btn-title">Where is R-side money moving this week vs. last week?</div><div class="dive-btn-sub">Track geographic shifts across NRCC, SLF, CLF, and CfG emails</div></div>
-        <div class="dive-arrow">↗</div>
-      </button>
-      <button class="dive-btn" onclick="showModal('Draft a donor email', 'Frame: Republicans are already on air, we need to match them now')">
-        <div class="dive-btn-body"><div class="dive-btn-title">Draft a donor email using the NRCC OH-07 buy as urgency fodder</div><div class="dive-btn-sub">Frame: Republicans are already on air, we need to match them now</div></div>
-        <div class="dive-arrow">↗</div>
-      </button>
-      <button class="dive-btn" onclick="showModal('Summarize Trump email themes', 'Pull subject lines and key frames — what will D clients respond to next?')">
-        <div class="dive-btn-body"><div class="dive-btn-title">Summarize Trump's email themes this week for a D-side counter-brief</div><div class="dive-btn-sub">Pull subject lines and key frames — what will D clients respond to next?</div></div>
-        <div class="dive-arrow">↗</div>
-      </button>
-    </div>
-  </div>
-
-  <!-- OTHER FLAGS -->
-  <div id="flags" class="tab-panel">
-    <div class="section-label">Flags</div>
-
-    <div class="flag-card">
-      <div class="flag-dot red"></div>
-      <div>
-        <div class="flag-title">New PAC registered — "Forward Together PAC" — first email received</div>
-        <div class="flag-meta">Not in FEC database as of last week. Origin unclear — potential new client. · 4:33 AM</div>
-        <span class="tag tag-new">New sender</span>
-      </div>
-    </div>
-
-    <div class="flag-card">
-      <div class="flag-dot amber"></div>
-      <div>
-        <div class="flag-title">James Talarico (TX-21) — first fundraising email of the cycle</div>
-        <div class="flag-meta">Frontrunning D challenger ramping up. First email is a signal — good moment for an early outreach. · 9:15 PM</div>
-        <span class="tag tag-new">Challenger ramp-up</span>
-      </div>
-    </div>
-
-    <div class="flag-card">
-      <div class="flag-dot amber"></div>
-      <div>
-        <div class="flag-title">FEC Notifications: 3 new PAC registrations filed</div>
-        <div class="flag-meta">New entrants into the cycle — cross-reference against known D-aligned donors. · 11:45 PM</div>
-        <span class="tag tag-new">New PACs</span>
-      </div>
-    </div>
-
-    <div class="flag-card">
-      <div class="flag-dot amber"></div>
-      <div>
-        <div class="flag-title">Cook Political Report: 3 race ratings moved this week</div>
-        <div class="flag-meta">Any Toss-Up or Lean D movement affects where client dollars go. · 2:00 AM</div>
-      </div>
-    </div>
-
-    <div class="flag-card">
-      <div class="flag-dot green"></div>
-      <div>
-        <div class="flag-title">OpenSecrets: Q1 outside spending data published</div>
-        <div class="flag-meta">Full IE dataset live — useful for client briefings on where D money flowed. · 3:15 AM</div>
-      </div>
-    </div>
-
-    <div class="dive-section">
-      <div class="dive-label">Ask Claude to go deeper</div>
-      <button class="dive-btn" onclick="showModal('Research Forward Together PAC', 'Cross-reference FEC filings, donor patterns, and known D-aligned orgs')">
-        <div class="dive-btn-body"><div class="dive-btn-title">Research Forward Together PAC — who might be behind it?</div><div class="dive-btn-sub">Cross-reference FEC filings, donor patterns, and known D-aligned orgs</div></div>
-        <div class="dive-arrow">↗</div>
-      </button>
-      <button class="dive-btn" onclick="showModal('Which Cook rating changes affect clients?', 'Flag any movement in seats where D-side clients are currently spending')">
-        <div class="dive-btn-body"><div class="dive-btn-title">Which Cook rating changes affect active client races?</div><div class="dive-btn-sub">Flag any movement in seats where D-side clients are currently spending</div></div>
-        <div class="dive-arrow">↗</div>
-      </button>
-    </div>
-  </div>
-
-  <!-- ALL EMAILS -->
-  <div id="all" class="tab-panel">
-    <div class="filter-row">
-      <button class="filter-btn active" onclick="filterEmails('all', this)">All 31</button>
-      <button class="filter-btn" onclick="filterEmails('dside', this)">D-side</button>
-      <button class="filter-btn" onclick="filterEmails('watch', this)">R-side watch</button>
-      <button class="filter-btn" onclick="filterEmails('news', this)">Industry</button>
-      <button class="filter-btn" onclick="filterEmails('flag', this)">Flagged</button>
-    </div>
-    <div class="email-list" id="emailListBody">
-      <div class="email-row" data-type="dside flag"><div><div class="email-sender">DCCC <span class="tag tag-spike">spike</span></div><div class="email-subject">2026 PRIORITIES SURVEY ENCLOSED</div></div><div class="email-time">7:01 AM</div></div>
-      <div class="email-row" data-type="watch flag"><div><div class="email-sender">NRCC <span class="tag tag-ad">R ad buy</span></div><div class="email-subject">New ad buys announced — key districts</div></div><div class="email-time">6:12 AM</div></div>
-      <div class="email-row" data-type="dside flag"><div><div class="email-sender">Priorities USA <span class="tag tag-shift">shift</span></div><div class="email-subject">Holding Republicans accountable</div></div><div class="email-time">5:47 AM</div></div>
-      <div class="email-row" data-type="watch flag"><div><div class="email-sender">Senate Leadership Fund <span class="tag tag-spike">watch</span></div><div class="email-subject">Why Georgia and Michigan matter</div></div><div class="email-time">5:22 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">EMILY's List</div><div class="email-subject">Our candidates need you now</div></div><div class="email-time">4:55 AM</div></div>
-      <div class="email-row" data-type="dside flag"><div><div class="email-sender">Forward Together PAC <span class="tag tag-new">new</span></div><div class="email-subject">Join us in 2026</div></div><div class="email-time">4:33 AM</div></div>
-      <div class="email-row" data-type="watch"><div><div class="email-sender">Congressional Leadership Fund</div><div class="email-subject">The stakes this November</div></div><div class="email-time">4:21 AM</div></div>
-      <div class="email-row" data-type="news flag"><div><div class="email-sender">Campaigns &amp; Elections</div><div class="email-subject">AI creative tools are reshaping political ads</div></div><div class="email-time">4:00 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">End Citizens United</div><div class="email-subject">They're using dark money to gut Medicaid</div></div><div class="email-time">3:55 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">DSCC</div><div class="email-subject">Senate update: where we stand</div></div><div class="email-time">3:47 AM</div></div>
-      <div class="email-row" data-type="news flag"><div><div class="email-sender">OpenSecrets</div><div class="email-subject">Q1 outside spending data now live</div></div><div class="email-time">3:15 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">Progressive Turnout Project</div><div class="email-subject">No more excuses. Accountability.</div></div><div class="email-time">3:05 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">DNC</div><div class="email-subject">Weekend momentum report</div></div><div class="email-time">2:58 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">House Majority PAC</div><div class="email-subject">These 6 seats decide everything</div></div><div class="email-time">2:44 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">Bold PAC</div><div class="email-subject">Hold them accountable this cycle</div></div><div class="email-time">2:38 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">American Bridge</div><div class="email-subject">Opposition research drop</div></div><div class="email-time">2:31 AM</div></div>
-      <div class="email-row" data-type="news flag"><div><div class="email-sender">Cook Political Report</div><div class="email-subject">Race rating changes: 3 seats move</div></div><div class="email-time">2:00 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">Defend the Vote</div><div class="email-subject">Election integrity update — 3 states</div></div><div class="email-time">1:55 AM</div></div>
-      <div class="email-row" data-type="watch"><div><div class="email-sender">NRSC</div><div class="email-subject">Senate recruitment update</div></div><div class="email-time">1:45 AM</div></div>
-      <div class="email-row" data-type="watch flag"><div><div class="email-sender">Club for Growth Action</div><div class="email-subject">Primary season preview</div></div><div class="email-time">1:22 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">Hold the Line PAC</div><div class="email-subject">Georgia is on the line</div></div><div class="email-time">1:15 AM</div></div>
-      <div class="email-row" data-type="watch flag"><div><div class="email-sender">Trump / Save America <span class="tag tag-spike">spike</span></div><div class="email-subject">They're coming after us again</div></div><div class="email-time">1:10 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">Senate Majority PAC</div><div class="email-subject">Our path to 51 seats</div></div><div class="email-time">12:55 AM</div></div>
-      <div class="email-row" data-type="news"><div><div class="email-sender">Politico Playbook</div><div class="email-subject">Monday morning: what to watch</div></div><div class="email-time">12:30 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">DCCC Frontline</div><div class="email-subject">Frontline member update</div></div><div class="email-time">12:15 AM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">NDTC</div><div class="email-subject">We're 47 donors short — FEC deadline Friday</div></div><div class="email-time">12:10 AM</div></div>
-      <div class="email-row" data-type="news"><div><div class="email-sender">Sabato's Crystal Ball</div><div class="email-subject">Weekly race roundup</div></div><div class="email-time">12:00 AM</div></div>
-      <div class="email-row" data-type="dside flag"><div><div class="email-sender">James Talarico (TX-21) <span class="tag tag-new">challenger</span></div><div class="email-subject">I'm running — and we can win this</div></div><div class="email-time">9:15 PM</div></div>
-      <div class="email-row" data-type="dside"><div><div class="email-sender">Elect Democratic Women</div><div class="email-subject">Meet the women running in 2026</div></div><div class="email-time">11:50 PM</div></div>
-      <div class="email-row" data-type="news flag"><div><div class="email-sender">FEC Notifications <span class="tag tag-new">new PACs</span></div><div class="email-subject">New PAC registrations: 3 filed</div></div><div class="email-time">11:45 PM</div></div>
-      <div class="email-row" data-type="news"><div><div class="email-sender">The Morning Score</div><div class="email-subject">Campaign finance weekly</div></div><div class="email-time">11:30 PM</div></div>
-    </div>
-  </div>
-
-  <!-- SUBSCRIPTION LIST -->
-  <div id="sublist" class="tab-panel">
-
-    <div class="sub-section-head">New Hire Baseline <span class="new-hire-badge">DAY ONE</span></div>
-    <div class="sub-context">Every new hire subscribes to this list first. It is the floor, not the ceiling.</div>
-    <div class="sub-table-wrap">
-      <table class="sub-table">
-        <thead><tr><th>Organization</th><th>Side</th><th>Signup URL</th></tr></thead>
-        <tbody>
-          <tr><td>Progressive Turnout Project</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://progressiveturnout.org" target="_blank">progressiveturnout.org</a></td></tr>
-          <tr><td>End Citizens United</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://endcitizensunited.org" target="_blank">endcitizensunited.org</a></td></tr>
-          <tr><td>Natl Democratic Training Committee</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://traindemocrats.org" target="_blank">traindemocrats.org</a></td></tr>
-          <tr><td>Elect Democratic Women</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://electdemocraticwomen.com" target="_blank">electdemocraticwomen.com</a></td></tr>
-          <tr><td>Bold PAC</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://boldpac.com" target="_blank">boldpac.com</a></td></tr>
-          <tr><td>EMILY's List</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://emilyslist.org" target="_blank">emilyslist.org</a></td></tr>
-          <tr><td>DNC</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://democrats.org/get-involved/" target="_blank">democrats.org/get-involved/</a></td></tr>
-          <tr><td>DCCC</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://dccc.org" target="_blank">dccc.org</a></td></tr>
-          <tr><td>DSCC</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://dscc.org" target="_blank">dscc.org</a></td></tr>
-          <tr><td>RNC</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://gop.com" target="_blank">gop.com</a></td></tr>
-          <tr><td>Trump / Save America</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://donaldjtrump.com/email" target="_blank">donaldjtrump.com/email</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="sub-section-head">Full D-Side PACs &amp; Outside Groups</div>
-    <div class="sub-context">Core client universe and warm prospects. Watching these tells you what clients are emphasizing now — and what they'll ask you to build next.</div>
-    <div class="sub-table-wrap">
-      <table class="sub-table">
-        <thead><tr><th>Organization</th><th>Focus</th><th>Signup URL</th></tr></thead>
-        <tbody>
-          <tr><td>Priorities USA</td><td>Largest Dem super PAC</td><td class="url-cell"><a class="url-link" href="https://prioritiesusa.org/contact/" target="_blank">prioritiesusa.org/contact/</a></td></tr>
-          <tr><td>Senate Majority PAC</td><td>Senate-focused IE spending</td><td class="url-cell"><a class="url-link" href="https://senatemajoritypac.com" target="_blank">senatemajoritypac.com</a></td></tr>
-          <tr><td>House Majority PAC</td><td>House-focused IE spending</td><td class="url-cell"><a class="url-link" href="https://housemajoritypac.com" target="_blank">housemajoritypac.com</a></td></tr>
-          <tr><td>American Bridge 21st C.</td><td>Opposition research / rapid response</td><td class="url-cell"><a class="url-link" href="https://americanbridgepac.org" target="_blank">americanbridgepac.org</a></td></tr>
-          <tr><td>Defend the Vote</td><td>Election protection / voting rights</td><td class="url-cell"><a class="url-link" href="https://defendthevote.com" target="_blank">defendthevote.com</a></td></tr>
-          <tr><td>Hold the Line PAC</td><td>Anti-MAGA accountability</td><td class="url-cell"><a class="url-link" href="https://holdthelinepac.com" target="_blank">holdthelinepac.com</a></td></tr>
-          <tr><td>ACLU</td><td>Civil liberties / mobilization</td><td class="url-cell"><a class="url-link" href="https://aclu.org/subscribe" target="_blank">aclu.org/subscribe</a></td></tr>
-          <tr><td>Democracy Forward</td><td>Legal accountability / litigation comms</td><td class="url-cell"><a class="url-link" href="https://democracyforward.org" target="_blank">democracyforward.org</a></td></tr>
-          <tr><td>Care in Action</td><td>Domestic workers advocacy PAC</td><td class="url-cell"><a class="url-link" href="https://careinaction.org" target="_blank">careinaction.org</a></td></tr>
-          <tr><td>Congressional Progressive Caucus PAC</td><td>Progressive House members</td><td class="url-cell"><a class="url-link" href="https://progressivecaucuspac.org" target="_blank">progressivecaucuspac.org</a></td></tr>
-          <tr><td>SEIU</td><td>Labor IE spending</td><td class="url-cell"><a class="url-link" href="https://seiu.org" target="_blank">seiu.org</a></td></tr>
-          <tr><td>Latino Victory</td><td>Latino candidate and voter focus</td><td class="url-cell"><a class="url-link" href="https://latinovictory.us" target="_blank">latinovictory.us</a></td></tr>
-          <tr><td>Run for Something</td><td>Down-ballot progressive recruitment</td><td class="url-cell"><a class="url-link" href="https://runforsomething.net" target="_blank">runforsomething.net</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="sub-section-head">Key Candidates — D + R</div>
-    <div class="sub-context">D incumbents and frontrunning challengers for messaging intel; key R candidates for counter-messaging fodder. Subscribe via campaign websites.</div>
-    <div class="sub-table-wrap">
-      <table class="sub-table">
-        <thead><tr><th>Candidate</th><th>Race</th><th>Side</th><th>Signup URL</th></tr></thead>
-        <tbody>
-          <tr><td>Sen. Jon Ossoff</td><td>GA Senate</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://ossoff.senate.gov" target="_blank">ossoff.senate.gov</a></td></tr>
-          <tr><td>Rep. Chris Pappas</td><td>NH-01 / Senate?</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://chrispappas.org" target="_blank">chrispappas.org</a></td></tr>
-          <tr><td>James Talarico</td><td>TX-21 Challenger</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://talarico.house.gov" target="_blank">talarico.house.gov</a></td></tr>
-          <tr><td>Rep. Ruben Gallego</td><td>AZ Senate</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://rubengallego.com" target="_blank">rubengallego.com</a></td></tr>
-          <tr><td>DCCC Frontline members</td><td>26 D seats</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://dccc.org/frontline" target="_blank">dccc.org/frontline</a></td></tr>
-          <tr><td>DCCC Red to Blue</td><td>Challenger list</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://dccc.org/redtoblue" target="_blank">dccc.org/redtoblue</a></td></tr>
-          <tr><td>Sen. Ted Cruz</td><td>TX Senate</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://tedcruz.org" target="_blank">tedcruz.org</a></td></tr>
-          <tr><td>Sen. Thom Tillis</td><td>NC Senate</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://thomtillis.com" target="_blank">thomtillis.com</a></td></tr>
-          <tr><td>Trump / Save America</td><td>National</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://donaldjtrump.com/email" target="_blank">donaldjtrump.com/email</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="sub-section-head">State Parties — Priority States</div>
-    <div class="sub-context">State parties surface down-ballot races and coordinated messaging before it shows up nationally. Both D and R sides for counter-messaging intel.</div>
-    <div class="sub-table-wrap">
-      <table class="sub-table">
-        <thead><tr><th>State Party</th><th>State</th><th>Side</th><th>Signup URL</th></tr></thead>
-        <tbody>
-          <tr><td>Georgia Democratic Party</td><td>GA</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://georgiademocrat.org" target="_blank">georgiademocrat.org</a></td></tr>
-          <tr><td>Texas Democratic Party</td><td>TX</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://txdemocrats.org" target="_blank">txdemocrats.org</a></td></tr>
-          <tr><td>Florida Democratic Party</td><td>FL</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://floridadems.org" target="_blank">floridadems.org</a></td></tr>
-          <tr><td>Ohio Democratic Party</td><td>OH</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://ohiodems.org" target="_blank">ohiodems.org</a></td></tr>
-          <tr><td>NC Democratic Party</td><td>NC</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://ncdp.org" target="_blank">ncdp.org</a></td></tr>
-          <tr><td>Georgia Republican Party</td><td>GA</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://gagop.org" target="_blank">gagop.org</a></td></tr>
-          <tr><td>Texas Republican Party</td><td>TX</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://texasgop.org" target="_blank">texasgop.org</a></td></tr>
-          <tr><td>Florida Republican Party</td><td>FL</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://floridagop.org" target="_blank">floridagop.org</a></td></tr>
-          <tr><td>Ohio Republican Party</td><td>OH</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://ohiogop.org" target="_blank">ohiogop.org</a></td></tr>
-          <tr><td>NC Republican Party</td><td>NC</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://ncgop.org" target="_blank">ncgop.org</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="sub-section-head">R-Side — Watch Only</div>
-    <div class="sub-context watch">Subscribe for counter-messaging intel and to track which D races are being targeted. Do not work for these orgs.</div>
-    <div class="sub-table-wrap">
-      <table class="sub-table">
-        <thead><tr><th class="rh">Organization</th><th class="rh">Why to Watch</th><th class="rh">Signup URL</th></tr></thead>
-        <tbody>
-          <tr><td>Club for Growth Action</td><td>Primary spending — watch for race signals</td><td class="url-cell"><a class="url-link" href="https://clubforgrowthaction.org" target="_blank">clubforgrowthaction.org</a></td></tr>
-          <tr><td>Congressional Leadership Fund</td><td>House GOP super PAC</td><td class="url-cell"><a class="url-link" href="https://congressionalleadershipfund.org" target="_blank">congressionalleadershipfund.org</a></td></tr>
-          <tr><td>Senate Leadership Fund</td><td>McConnell-aligned Senate battlefield tracking</td><td class="url-cell"><a class="url-link" href="https://senateleadershipfund.com" target="_blank">senateleadershipfund.com</a></td></tr>
-          <tr><td>MAGA Inc.</td><td>Sets national R message frame</td><td class="url-cell"><a class="url-link" href="https://magainc.com" target="_blank">magainc.com</a></td></tr>
-          <tr><td>NRCC</td><td>Targets D incumbents your clients defend</td><td class="url-cell"><a class="url-link" href="https://nrcc.org" target="_blank">nrcc.org</a></td></tr>
-          <tr><td>NRSC</td><td>Targets D senators your clients support</td><td class="url-cell"><a class="url-link" href="https://nrsc.org" target="_blank">nrsc.org</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="sub-section-head">Industry Publications &amp; Ad Intel</div>
-    <div class="sub-context">AdImpact tracks actual ad buys by race and platform. FEC Notification Service = new PAC filings = potential clients before they hire anyone.</div>
-    <div class="sub-table-wrap">
-      <table class="sub-table">
-        <thead><tr><th>Source</th><th>Type</th><th>Cost</th><th>Signup URL</th></tr></thead>
-        <tbody>
-          <tr><td>Campaigns &amp; Elections</td><td>Industry trade</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://campaignsandelections.com/newsletter/" target="_blank">campaignsandelections.com/newsletter/</a></td></tr>
-          <tr><td>AdImpact Newsletter</td><td>Ad buy intel</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://go.adimpact.com" target="_blank">go.adimpact.com</a></td></tr>
-          <tr><td>Politico Playbook</td><td>Daily news</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://politico.com/playbook" target="_blank">politico.com/playbook</a></td></tr>
-          <tr><td>The Morning Score</td><td>Campaign finance</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://politico.com/morningscore" target="_blank">politico.com/morningscore</a></td></tr>
-          <tr><td>Cook Political Report</td><td>Race analysis</td><td><span class="cost-paid">$35/mo</span></td><td class="url-cell"><a class="url-link" href="https://cookpolitical.com" target="_blank">cookpolitical.com</a></td></tr>
-          <tr><td>OpenSecrets Newsletter</td><td>Money in politics</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://opensecrets.org/newsletter/signup-form" target="_blank">opensecrets.org/newsletter/signup-form</a></td></tr>
-          <tr><td>Sabato's Crystal Ball</td><td>Race forecasting</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://centerforpolitics.org/crystalball/" target="_blank">centerforpolitics.org/crystalball/</a></td></tr>
-          <tr><td>Roll Call</td><td>Capitol Hill</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://rollcall.com" target="_blank">rollcall.com</a></td></tr>
-          <tr><td>FEC Notification Service</td><td>Regulatory</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://fec.gov/updates/" target="_blank">fec.gov/updates/</a></td></tr>
-          <tr><td>The Hotline</td><td>Daily briefing</td><td><span class="cost-paid">Paid</span></td><td class="url-cell"><a class="url-link" href="https://nationaljournal.com/hotline" target="_blank">nationaljournal.com/hotline</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-
 </div>
-
+<div class="dive-section">
+<div class="dive-label">Ask Claude to go deeper</div>
+<button class="dive-btn" onclick="showModal('Where is R-side money moving?', 'Track geographic shifts across NRCC, SLF, CLF, and CfG emails')">
+<div class="dive-btn-body"><div class="dive-btn-title">Where is R-side money moving this week vs. last week?</div><div class="dive-btn-sub">Track geographic shifts across NRCC, SLF, CLF, and CfG emails</div></div>
+<div class="dive-arrow">↗</div>
+</button>
+<button class="dive-btn" onclick="showModal('Draft a donor email', 'Frame: Republicans are already on air, we need to match them now')">
+<div class="dive-btn-body"><div class="dive-btn-title">Draft a donor email using the NRCC OH-07 buy as urgency fodder</div><div class="dive-btn-sub">Frame: Republicans are already on air, we need to match them now</div></div>
+<div class="dive-arrow">↗</div>
+</button>
+<button class="dive-btn" onclick="showModal('Summarize Trump email themes', 'Pull subject lines and key frames — what will D clients respond to next?')">
+<div class="dive-btn-body"><div class="dive-btn-title">Summarize Trump's email themes this week for a D-side counter-brief</div><div class="dive-btn-sub">Pull subject lines and key frames — what will D clients respond to next?</div></div>
+<div class="dive-arrow">↗</div>
+</button>
+</div>
+</div>
+<!-- OTHER FLAGS -->
+<div class="tab-panel" id="flags">
+<div class="section-label">Flags</div>
+<div class="flag-card">
+<div class="flag-dot red"></div>
+<div>
+<div class="flag-title">New PAC registered — "Forward Together PAC" — first email received</div>
+<div class="flag-meta">Not in FEC database as of last week. Origin unclear — potential new client. · 4:33 AM</div>
+<span class="tag tag-new">New sender</span>
+</div>
+</div>
+<div class="flag-card">
+<div class="flag-dot amber"></div>
+<div>
+<div class="flag-title">James Talarico (TX-21) — first fundraising email of the cycle</div>
+<div class="flag-meta">Frontrunning D challenger ramping up. First email is a signal — good moment for an early outreach. · 9:15 PM</div>
+<span class="tag tag-new">Challenger ramp-up</span>
+</div>
+</div>
+<div class="flag-card">
+<div class="flag-dot amber"></div>
+<div>
+<div class="flag-title">FEC Notifications: 3 new PAC registrations filed</div>
+<div class="flag-meta">New entrants into the cycle — cross-reference against known D-aligned donors. · 11:45 PM</div>
+<span class="tag tag-new">New PACs</span>
+</div>
+</div>
+<div class="flag-card">
+<div class="flag-dot amber"></div>
+<div>
+<div class="flag-title">Cook Political Report: 3 race ratings moved this week</div>
+<div class="flag-meta">Any Toss-Up or Lean D movement affects where client dollars go. · 2:00 AM</div>
+</div>
+</div>
+<div class="flag-card">
+<div class="flag-dot green"></div>
+<div>
+<div class="flag-title">OpenSecrets: Q1 outside spending data published</div>
+<div class="flag-meta">Full IE dataset live — useful for client briefings on where D money flowed. · 3:15 AM</div>
+</div>
+</div>
+<div class="dive-section">
+<div class="dive-label">Ask Claude to go deeper</div>
+<button class="dive-btn" onclick="showModal('Research Forward Together PAC', 'Cross-reference FEC filings, donor patterns, and known D-aligned orgs')">
+<div class="dive-btn-body"><div class="dive-btn-title">Research Forward Together PAC — who might be behind it?</div><div class="dive-btn-sub">Cross-reference FEC filings, donor patterns, and known D-aligned orgs</div></div>
+<div class="dive-arrow">↗</div>
+</button>
+<button class="dive-btn" onclick="showModal('Which Cook rating changes affect clients?', 'Flag any movement in seats where D-side clients are currently spending')">
+<div class="dive-btn-body"><div class="dive-btn-title">Which Cook rating changes affect active client races?</div><div class="dive-btn-sub">Flag any movement in seats where D-side clients are currently spending</div></div>
+<div class="dive-arrow">↗</div>
+</button>
+</div>
+</div>
+<!-- ALL EMAILS -->
+<div class="tab-panel" id="all">
+<div class="filter-row">
+<button class="filter-btn active" onclick="filterEmails('all', this)">All 31</button>
+<button class="filter-btn" onclick="filterEmails('dside', this)">D-side</button>
+<button class="filter-btn" onclick="filterEmails('watch', this)">R-side watch</button>
+<button class="filter-btn" onclick="filterEmails('news', this)">Industry</button>
+<button class="filter-btn" onclick="filterEmails('flag', this)">Flagged</button>
+</div>
+<div class="email-list" id="emailListBody">
+<div class="email-row" data-type="dside flag"><div><div class="email-sender">DCCC <span class="tag tag-spike">spike</span></div><div class="email-subject">2026 PRIORITIES SURVEY ENCLOSED</div></div><div class="email-time">7:01 AM</div></div>
+<div class="email-row" data-type="watch flag"><div><div class="email-sender">NRCC <span class="tag tag-ad">R ad buy</span></div><div class="email-subject">New ad buys announced — key districts</div></div><div class="email-time">6:12 AM</div></div>
+<div class="email-row" data-type="dside flag"><div><div class="email-sender">Priorities USA <span class="tag tag-shift">shift</span></div><div class="email-subject">Holding Republicans accountable</div></div><div class="email-time">5:47 AM</div></div>
+<div class="email-row" data-type="watch flag"><div><div class="email-sender">Senate Leadership Fund <span class="tag tag-spike">watch</span></div><div class="email-subject">Why Georgia and Michigan matter</div></div><div class="email-time">5:22 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">EMILY's List</div><div class="email-subject">Our candidates need you now</div></div><div class="email-time">4:55 AM</div></div>
+<div class="email-row" data-type="dside flag"><div><div class="email-sender">Forward Together PAC <span class="tag tag-new">new</span></div><div class="email-subject">Join us in 2026</div></div><div class="email-time">4:33 AM</div></div>
+<div class="email-row" data-type="watch"><div><div class="email-sender">Congressional Leadership Fund</div><div class="email-subject">The stakes this November</div></div><div class="email-time">4:21 AM</div></div>
+<div class="email-row" data-type="news flag"><div><div class="email-sender">Campaigns &amp; Elections</div><div class="email-subject">AI creative tools are reshaping political ads</div></div><div class="email-time">4:00 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">End Citizens United</div><div class="email-subject">They're using dark money to gut Medicaid</div></div><div class="email-time">3:55 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">DSCC</div><div class="email-subject">Senate update: where we stand</div></div><div class="email-time">3:47 AM</div></div>
+<div class="email-row" data-type="news flag"><div><div class="email-sender">OpenSecrets</div><div class="email-subject">Q1 outside spending data now live</div></div><div class="email-time">3:15 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">Progressive Turnout Project</div><div class="email-subject">No more excuses. Accountability.</div></div><div class="email-time">3:05 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">DNC</div><div class="email-subject">Weekend momentum report</div></div><div class="email-time">2:58 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">House Majority PAC</div><div class="email-subject">These 6 seats decide everything</div></div><div class="email-time">2:44 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">Bold PAC</div><div class="email-subject">Hold them accountable this cycle</div></div><div class="email-time">2:38 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">American Bridge</div><div class="email-subject">Opposition research drop</div></div><div class="email-time">2:31 AM</div></div>
+<div class="email-row" data-type="news flag"><div><div class="email-sender">Cook Political Report</div><div class="email-subject">Race rating changes: 3 seats move</div></div><div class="email-time">2:00 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">Defend the Vote</div><div class="email-subject">Election integrity update — 3 states</div></div><div class="email-time">1:55 AM</div></div>
+<div class="email-row" data-type="watch"><div><div class="email-sender">NRSC</div><div class="email-subject">Senate recruitment update</div></div><div class="email-time">1:45 AM</div></div>
+<div class="email-row" data-type="watch flag"><div><div class="email-sender">Club for Growth Action</div><div class="email-subject">Primary season preview</div></div><div class="email-time">1:22 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">Hold the Line PAC</div><div class="email-subject">Georgia is on the line</div></div><div class="email-time">1:15 AM</div></div>
+<div class="email-row" data-type="watch flag"><div><div class="email-sender">Trump / Save America <span class="tag tag-spike">spike</span></div><div class="email-subject">They're coming after us again</div></div><div class="email-time">1:10 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">Senate Majority PAC</div><div class="email-subject">Our path to 51 seats</div></div><div class="email-time">12:55 AM</div></div>
+<div class="email-row" data-type="news"><div><div class="email-sender">Politico Playbook</div><div class="email-subject">Monday morning: what to watch</div></div><div class="email-time">12:30 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">DCCC Frontline</div><div class="email-subject">Frontline member update</div></div><div class="email-time">12:15 AM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">NDTC</div><div class="email-subject">We're 47 donors short — FEC deadline Friday</div></div><div class="email-time">12:10 AM</div></div>
+<div class="email-row" data-type="news"><div><div class="email-sender">Sabato's Crystal Ball</div><div class="email-subject">Weekly race roundup</div></div><div class="email-time">12:00 AM</div></div>
+<div class="email-row" data-type="dside flag"><div><div class="email-sender">James Talarico (TX-21) <span class="tag tag-new">challenger</span></div><div class="email-subject">I'm running — and we can win this</div></div><div class="email-time">9:15 PM</div></div>
+<div class="email-row" data-type="dside"><div><div class="email-sender">Elect Democratic Women</div><div class="email-subject">Meet the women running in 2026</div></div><div class="email-time">11:50 PM</div></div>
+<div class="email-row" data-type="news flag"><div><div class="email-sender">FEC Notifications <span class="tag tag-new">new PACs</span></div><div class="email-subject">New PAC registrations: 3 filed</div></div><div class="email-time">11:45 PM</div></div>
+<div class="email-row" data-type="news"><div><div class="email-sender">The Morning Score</div><div class="email-subject">Campaign finance weekly</div></div><div class="email-time">11:30 PM</div></div>
+</div>
+</div>
+<!-- SUBSCRIPTION LIST -->
+<div class="tab-panel" id="sublist">
+<div class="sub-section-head">New Hire Baseline <span class="new-hire-badge">DAY ONE</span></div>
+<div class="sub-context">Every new hire subscribes to this list first. It is the floor, not the ceiling.</div>
+<div class="sub-table-wrap">
+<table class="sub-table">
+<thead><tr><th>Organization</th><th>Side</th><th>Signup URL</th></tr></thead>
+<tbody>
+<tr><td>Progressive Turnout Project</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://progressiveturnout.org" target="_blank">progressiveturnout.org</a></td></tr>
+<tr><td>End Citizens United</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://endcitizensunited.org" target="_blank">endcitizensunited.org</a></td></tr>
+<tr><td>Natl Democratic Training Committee</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://traindemocrats.org" target="_blank">traindemocrats.org</a></td></tr>
+<tr><td>Elect Democratic Women</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://electdemocraticwomen.com" target="_blank">electdemocraticwomen.com</a></td></tr>
+<tr><td>Bold PAC</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://boldpac.com" target="_blank">boldpac.com</a></td></tr>
+<tr><td>EMILY's List</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://emilyslist.org" target="_blank">emilyslist.org</a></td></tr>
+<tr><td>DNC</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://democrats.org/get-involved/" target="_blank">democrats.org/get-involved/</a></td></tr>
+<tr><td>DCCC</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://dccc.org" target="_blank">dccc.org</a></td></tr>
+<tr><td>DSCC</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://dscc.org" target="_blank">dscc.org</a></td></tr>
+<tr><td>RNC</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://gop.com" target="_blank">gop.com</a></td></tr>
+<tr><td>Trump / Save America</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://donaldjtrump.com/email" target="_blank">donaldjtrump.com/email</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="sub-section-head">Full D-Side PACs &amp; Outside Groups</div>
+<div class="sub-context">Core client universe and warm prospects. Watching these tells you what clients are emphasizing now — and what they'll ask you to build next.</div>
+<div class="sub-table-wrap">
+<table class="sub-table">
+<thead><tr><th>Organization</th><th>Focus</th><th>Signup URL</th></tr></thead>
+<tbody>
+<tr><td>Priorities USA</td><td>Largest Dem super PAC</td><td class="url-cell"><a class="url-link" href="https://prioritiesusa.org/contact/" target="_blank">prioritiesusa.org/contact/</a></td></tr>
+<tr><td>Senate Majority PAC</td><td>Senate-focused IE spending</td><td class="url-cell"><a class="url-link" href="https://senatemajoritypac.com" target="_blank">senatemajoritypac.com</a></td></tr>
+<tr><td>House Majority PAC</td><td>House-focused IE spending</td><td class="url-cell"><a class="url-link" href="https://housemajoritypac.com" target="_blank">housemajoritypac.com</a></td></tr>
+<tr><td>American Bridge 21st C.</td><td>Opposition research / rapid response</td><td class="url-cell"><a class="url-link" href="https://americanbridgepac.org" target="_blank">americanbridgepac.org</a></td></tr>
+<tr><td>Defend the Vote</td><td>Election protection / voting rights</td><td class="url-cell"><a class="url-link" href="https://defendthevote.com" target="_blank">defendthevote.com</a></td></tr>
+<tr><td>Hold the Line PAC</td><td>Anti-MAGA accountability</td><td class="url-cell"><a class="url-link" href="https://holdthelinepac.com" target="_blank">holdthelinepac.com</a></td></tr>
+<tr><td>ACLU</td><td>Civil liberties / mobilization</td><td class="url-cell"><a class="url-link" href="https://aclu.org/subscribe" target="_blank">aclu.org/subscribe</a></td></tr>
+<tr><td>Democracy Forward</td><td>Legal accountability / litigation comms</td><td class="url-cell"><a class="url-link" href="https://democracyforward.org" target="_blank">democracyforward.org</a></td></tr>
+<tr><td>Care in Action</td><td>Domestic workers advocacy PAC</td><td class="url-cell"><a class="url-link" href="https://careinaction.org" target="_blank">careinaction.org</a></td></tr>
+<tr><td>Congressional Progressive Caucus PAC</td><td>Progressive House members</td><td class="url-cell"><a class="url-link" href="https://progressivecaucuspac.org" target="_blank">progressivecaucuspac.org</a></td></tr>
+<tr><td>SEIU</td><td>Labor IE spending</td><td class="url-cell"><a class="url-link" href="https://seiu.org" target="_blank">seiu.org</a></td></tr>
+<tr><td>Latino Victory</td><td>Latino candidate and voter focus</td><td class="url-cell"><a class="url-link" href="https://latinovictory.us" target="_blank">latinovictory.us</a></td></tr>
+<tr><td>Run for Something</td><td>Down-ballot progressive recruitment</td><td class="url-cell"><a class="url-link" href="https://runforsomething.net" target="_blank">runforsomething.net</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="sub-section-head">Key Candidates — D + R</div>
+<div class="sub-context">D incumbents and frontrunning challengers for messaging intel; key R candidates for counter-messaging fodder. Subscribe via campaign websites.</div>
+<div class="sub-table-wrap">
+<table class="sub-table">
+<thead><tr><th>Candidate</th><th>Race</th><th>Side</th><th>Signup URL</th></tr></thead>
+<tbody>
+<tr><td>Sen. Jon Ossoff</td><td>GA Senate</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://ossoff.senate.gov" target="_blank">ossoff.senate.gov</a></td></tr>
+<tr><td>Rep. Chris Pappas</td><td>NH-01 / Senate?</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://chrispappas.org" target="_blank">chrispappas.org</a></td></tr>
+<tr><td>James Talarico</td><td>TX-21 Challenger</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://talarico.house.gov" target="_blank">talarico.house.gov</a></td></tr>
+<tr><td>Rep. Ruben Gallego</td><td>AZ Senate</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://rubengallego.com" target="_blank">rubengallego.com</a></td></tr>
+<tr><td>DCCC Frontline members</td><td>26 D seats</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://dccc.org/frontline" target="_blank">dccc.org/frontline</a></td></tr>
+<tr><td>DCCC Red to Blue</td><td>Challenger list</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://dccc.org/redtoblue" target="_blank">dccc.org/redtoblue</a></td></tr>
+<tr><td>Sen. Ted Cruz</td><td>TX Senate</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://tedcruz.org" target="_blank">tedcruz.org</a></td></tr>
+<tr><td>Sen. Thom Tillis</td><td>NC Senate</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://thomtillis.com" target="_blank">thomtillis.com</a></td></tr>
+<tr><td>Trump / Save America</td><td>National</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://donaldjtrump.com/email" target="_blank">donaldjtrump.com/email</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="sub-section-head">State Parties — Priority States</div>
+<div class="sub-context">State parties surface down-ballot races and coordinated messaging before it shows up nationally. Both D and R sides for counter-messaging intel.</div>
+<div class="sub-table-wrap">
+<table class="sub-table">
+<thead><tr><th>State Party</th><th>State</th><th>Side</th><th>Signup URL</th></tr></thead>
+<tbody>
+<tr><td>Georgia Democratic Party</td><td>GA</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://georgiademocrat.org" target="_blank">georgiademocrat.org</a></td></tr>
+<tr><td>Texas Democratic Party</td><td>TX</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://txdemocrats.org" target="_blank">txdemocrats.org</a></td></tr>
+<tr><td>Florida Democratic Party</td><td>FL</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://floridadems.org" target="_blank">floridadems.org</a></td></tr>
+<tr><td>Ohio Democratic Party</td><td>OH</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://ohiodems.org" target="_blank">ohiodems.org</a></td></tr>
+<tr><td>NC Democratic Party</td><td>NC</td><td><span class="side-d">D</span></td><td class="url-cell"><a class="url-link" href="https://ncdp.org" target="_blank">ncdp.org</a></td></tr>
+<tr><td>Georgia Republican Party</td><td>GA</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://gagop.org" target="_blank">gagop.org</a></td></tr>
+<tr><td>Texas Republican Party</td><td>TX</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://texasgop.org" target="_blank">texasgop.org</a></td></tr>
+<tr><td>Florida Republican Party</td><td>FL</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://floridagop.org" target="_blank">floridagop.org</a></td></tr>
+<tr><td>Ohio Republican Party</td><td>OH</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://ohiogop.org" target="_blank">ohiogop.org</a></td></tr>
+<tr><td>NC Republican Party</td><td>NC</td><td><span class="side-r">R</span></td><td class="url-cell"><a class="url-link" href="https://ncgop.org" target="_blank">ncgop.org</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="sub-section-head">R-Side — Watch Only</div>
+<div class="sub-context watch">Subscribe for counter-messaging intel and to track which D races are being targeted. Do not work for these orgs.</div>
+<div class="sub-table-wrap">
+<table class="sub-table">
+<thead><tr><th class="rh">Organization</th><th class="rh">Why to Watch</th><th class="rh">Signup URL</th></tr></thead>
+<tbody>
+<tr><td>Club for Growth Action</td><td>Primary spending — watch for race signals</td><td class="url-cell"><a class="url-link" href="https://clubforgrowthaction.org" target="_blank">clubforgrowthaction.org</a></td></tr>
+<tr><td>Congressional Leadership Fund</td><td>House GOP super PAC</td><td class="url-cell"><a class="url-link" href="https://congressionalleadershipfund.org" target="_blank">congressionalleadershipfund.org</a></td></tr>
+<tr><td>Senate Leadership Fund</td><td>McConnell-aligned Senate battlefield tracking</td><td class="url-cell"><a class="url-link" href="https://senateleadershipfund.com" target="_blank">senateleadershipfund.com</a></td></tr>
+<tr><td>MAGA Inc.</td><td>Sets national R message frame</td><td class="url-cell"><a class="url-link" href="https://magainc.com" target="_blank">magainc.com</a></td></tr>
+<tr><td>NRCC</td><td>Targets D incumbents your clients defend</td><td class="url-cell"><a class="url-link" href="https://nrcc.org" target="_blank">nrcc.org</a></td></tr>
+<tr><td>NRSC</td><td>Targets D senators your clients support</td><td class="url-cell"><a class="url-link" href="https://nrsc.org" target="_blank">nrsc.org</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="sub-section-head">Industry Publications &amp; Ad Intel</div>
+<div class="sub-context">AdImpact tracks actual ad buys by race and platform. FEC Notification Service = new PAC filings = potential clients before they hire anyone.</div>
+<div class="sub-table-wrap">
+<table class="sub-table">
+<thead><tr><th>Source</th><th>Type</th><th>Cost</th><th>Signup URL</th></tr></thead>
+<tbody>
+<tr><td>Campaigns &amp; Elections</td><td>Industry trade</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://campaignsandelections.com/newsletter/" target="_blank">campaignsandelections.com/newsletter/</a></td></tr>
+<tr><td>AdImpact Newsletter</td><td>Ad buy intel</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://go.adimpact.com" target="_blank">go.adimpact.com</a></td></tr>
+<tr><td>Politico Playbook</td><td>Daily news</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://politico.com/playbook" target="_blank">politico.com/playbook</a></td></tr>
+<tr><td>The Morning Score</td><td>Campaign finance</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://politico.com/morningscore" target="_blank">politico.com/morningscore</a></td></tr>
+<tr><td>Cook Political Report</td><td>Race analysis</td><td><span class="cost-paid">$35/mo</span></td><td class="url-cell"><a class="url-link" href="https://cookpolitical.com" target="_blank">cookpolitical.com</a></td></tr>
+<tr><td>OpenSecrets Newsletter</td><td>Money in politics</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://opensecrets.org/newsletter/signup-form" target="_blank">opensecrets.org/newsletter/signup-form</a></td></tr>
+<tr><td>Sabato's Crystal Ball</td><td>Race forecasting</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://centerforpolitics.org/crystalball/" target="_blank">centerforpolitics.org/crystalball/</a></td></tr>
+<tr><td>Roll Call</td><td>Capitol Hill</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://rollcall.com" target="_blank">rollcall.com</a></td></tr>
+<tr><td>FEC Notification Service</td><td>Regulatory</td><td><span class="cost-free">Free</span></td><td class="url-cell"><a class="url-link" href="https://fec.gov/updates/" target="_blank">fec.gov/updates/</a></td></tr>
+<tr><td>The Hotline</td><td>Daily briefing</td><td><span class="cost-paid">Paid</span></td><td class="url-cell"><a class="url-link" href="https://nationaljournal.com/hotline" target="_blank">nationaljournal.com/hotline</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <!-- Modal for Claude prompts -->
-<div id="claudeModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">Claude Analysis Request</div>
-    <div class="modal-body" id="modalBody"></div>
-    <div class="modal-footer">
-      <button class="modal-btn" onclick="closeModal()">Close</button>
-    </div>
-  </div>
+<div class="modal" id="claudeModal">
+<div class="modal-content">
+<div class="modal-header">Claude Analysis Request</div>
+<div class="modal-body" id="modalBody"></div>
+<div class="modal-footer">
+<button class="modal-btn" onclick="closeModal()">Close</button>
 </div>
-
+</div>
+</div>
 <script>
 function showTab(id, el) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
