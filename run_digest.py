@@ -220,7 +220,7 @@ def generate_digest_content(emails: List[Dict], new_senders: List[str]) -> Dict:
     Returns:
         Parsed JSON response with trend_cards, spend_cards, flag_cards, stats
     """
-    client = Anthropic()
+    client = Anthropic(api_key=config.ANTHROPIC_API_KEY)
 
     prompt = build_digest_prompt(emails, new_senders)
 
